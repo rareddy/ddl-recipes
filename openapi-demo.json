@@ -3,5 +3,38 @@
     "info": {
         "title": "Demo",
         "description": "Demo"
+    },
+    "paths": {
+        "/demo": {
+            "get": {}
+        }
+    },
+    "tags": [
+        {
+            "name": "hi",
+            "description": ""
+        }
+    ],
+    "definitions": {
+        "Customer": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "ssn": {
+                    "type": "integer"
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "oauth": {
+            "type": "oauth2",
+            "flow": "implicit",
+            "authorizationUrl": "http://foo.com",
+            "scopes": {
+                "demo": "demo"
+            }
+        }
     }
 }
