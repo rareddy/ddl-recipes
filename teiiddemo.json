@@ -3,5 +3,37 @@
     "info": {
         "title": "TeiidDemo",
         "description": "asdfasdf"
+    },
+    "paths": {
+        "/getCustomer": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Customer": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                }
+            }
+        }
     }
 }
