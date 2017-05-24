@@ -5,15 +5,9 @@
         "description": "asdfasdf"
     },
     "paths": {
-        "/getCustomer": {
+        "/customer": {
             "get": {
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "query",
-                        "type": "integer"
-                    }
-                ],
+                "summary": "Gets Customer",
                 "responses": {
                     "200": {
                         "schema": {
@@ -21,7 +15,14 @@
                         }
                     }
                 }
-            }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "query",
+                    "type": "integer"
+                }
+            ]
         }
     },
     "definitions": {
